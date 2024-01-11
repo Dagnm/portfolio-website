@@ -4,24 +4,11 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
   const projects = [
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
     {
       title: "Business Startup",
       description: "Design & Development",
@@ -43,17 +30,28 @@ export const Projects = () => {
       <Container>
         <Row>
           <Col>
-            <h2> Projects</h2>
-            <p>
-              Ullamco pariatur proident proident elit laboris incididunt sint et
-              ut magna. Enim excepteur deserunt consequat veniam et Lorem dolore
-              qui non nostrud ad exercitation tempor. Deserunt sit laboris
-              reprehenderit ad cillum est ipsum mollit laboris proident velit
-              irure. Exercitation esse officia id et incididunt amet quis cillum
-              amet magna irure elit cupidatat. Lorem anim mollit ut aliquip sit
-              cupidatat occaecat. Occaecat pariatur velit ea nulla aliquip eu
-              esse laborum magna.
-            </p>
+            <TrackVisibility>
+              {({ isVisible }) => (
+                <div
+                  className={
+                    isVisible ? "animate__animated animate__slideInUp" : ""
+                  }
+                >
+                  <h2> Projects</h2>
+                  <p>
+                    Ullamco pariatur proident proident elit laboris incididunt
+                    sint et ut magna. Enim excepteur deserunt consequat veniam
+                    et Lorem dolore qui non nostrud ad exercitation tempor.
+                    Deserunt sit laboris reprehenderit ad cillum est ipsum
+                    mollit laboris proident velit irure. Exercitation esse
+                    officia id et incididunt amet quis cillum amet magna irure
+                    elit cupidatat. Lorem anim mollit ut aliquip sit cupidatat
+                    occaecat. Occaecat pariatur velit ea nulla aliquip eu esse
+                    laborum magna.
+                  </p>
+                </div>
+              )}
+            </TrackVisibility>
             <TabContainer id="projects-tabs" defaultActiveKey="first">
               <Nav
                 variant="pills"

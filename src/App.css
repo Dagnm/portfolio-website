@@ -81,7 +81,8 @@ html{
 
 /* Project CSS */
 .project {
-  padding: 80px 0;
+  padding: 120px 0;
+  z-index: -1;
   position: relative;
   background-color: black;
 }
@@ -583,6 +584,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   width: 40%;
   z-index: -4;
+  
 }
 
 /************ Projects Css ************/
@@ -797,7 +799,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #121212;
   padding: 85px 125px;
   margin-bottom: 80px;
-  margin-top: -122px;
+  margin-top: 1px;
+}
+.newsletter h3{
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
 }
 .newsletter-bx h3 {
   font-weight: 700;

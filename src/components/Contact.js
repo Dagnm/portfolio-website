@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+
 export const Contact = () => {
   const formInitalDetails = {
     firstName: "",
@@ -13,6 +14,7 @@ export const Contact = () => {
   const [formDetails, setFormDetails] = useState(formInitalDetails);
   const [buttonText, setButtonText] = useState("Send");
   const [status, setStatus] = useState({});
+
   const onFormUpdate = (category, value) => {
     setFormDetails({
       ...formDetails,
@@ -92,7 +94,7 @@ export const Contact = () => {
                     onChange={(e) => onFormUpdate("Message", e.target.value)}
                   />
                   <button type="submit">
-                    <span>{button}</span>
+                    <span>{buttonText}</span>
                   </button>
                 </Col>
                 {status.message && (
@@ -112,3 +114,4 @@ export const Contact = () => {
     </section>
   );
 };
+export default Contact;

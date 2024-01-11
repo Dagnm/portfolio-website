@@ -3,32 +3,35 @@ import { MailchimpForm } from "./MailchimpForm";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
+import logo from "../assets/img/logo.svg";
 
 export const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row className="align-center">
+        <Row className="align-items-center">
           <MailchimpForm />
-          <Col sm={6}>
-            <image src={logo} alt="logo" />
+          <Col size={12} sm={6}>
+            <img src={logo} alt="Logo" />
           </Col>
-          <Col sm={6} className="text-center text-sm-end">
+          <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a>
-                <imgs src={navIcon1} />
+              <a href="#">
+                <img src={navIcon1} alt="Icon" />
               </a>
-              <a>
-                <imgs src={navIcon2} />
+              <a href="#">
+                <img src={navIcon2} alt="Icon" />
               </a>
-              <a>
-                <imgs src={navIcon3} />
+              <a href="#">
+                <img src={navIcon3} alt="Icon" />
               </a>
             </div>
-            <p> CopyRight 2023. All Right Reserved</p>
+            <p>Copyright 2024. All Rights Reserved @ Dagnachew Mekonnen</p>
           </Col>
         </Row>
       </Container>
     </footer>
   );
 };
+
+export default Footer;
