@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+// import colorSharp from "../assets/img/color-sharp.png";
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
@@ -68,7 +68,7 @@ export const Skills = () => {
           </Col>
         </Row>
       </Container>
-      <img className="backgroun-image-left" src={colorSharp} />
+      {/* <img className="backgroun-image-left" src={colorSharp} /> */}
     </section>
   );
 };
